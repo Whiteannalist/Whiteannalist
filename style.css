@@ -1,0 +1,754 @@
+/* รีเซ็ตเบื้องต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+/* พื้นหลังและโทนสีหลัก */
+body {
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* ---------- เอฟเฟกต์เปลี่ยนหน้า (Page Fade Transition) ---------- */
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+  background-color: #fff; 
+}
+
+/* เมื่อโหลดหน้าเสร็จให้เฟดเข้ามา */
+body.fade-in {
+  opacity: 1;
+}
+
+
+
+/* ส่วนหัว */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  background: #e7ecf1;
+}
+
+/* โลโก้ */
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img{
+   width: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+/* เมนู */
+nav ul {
+  list-style: none;
+  display: flex;
+  background: #fff;
+  border-radius: 50px;
+  padding: 30px 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover{
+  color: #6da2df;
+}
+
+/* ส่วนปกหลัก */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  z-index: 0;
+  
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  object-position: 30% 20%; 
+  transform: scale(1.4);    /* ซูมเข้า*/
+  filter:  saturate(0.8);
+}
+
+
+
+
+/* กล่องข้อความ */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* จัดข้อความทางซ้าย */
+  padding-left: 150px;
+  z-index: 3; /* อยู่ด้านบนสุด */
+}
+
+.intro-box {
+  background: rgba(255,255,255,0.95);
+  padding: 50px 40px;
+  width: 280px;
+  border-radius: 100px 100px 0 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-top: 100px;
+}
+
+.intro-box h1 {
+  text-align: center;
+  font-size: 25px;
+  color: #5c5c5c;
+  margin-bottom: 15px;
+  
+}
+
+.intro-box p {
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+}
+
+
+/* ---------- เอฟเฟกต์ตอน hover ---------- */
+.intro-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+
+/* ส่วน Contact */
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 100px;
+}
+
+.contact-info {
+  text-align: left;
+}
+.contact-info h1
+{
+  font-size: 18px;;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #000;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.commission {
+  font-size: 13px;
+  color: #444;
+}
+
+/* ส่วนแสดงภาพ */
+.gallery {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 80px;
+  gap: 30px;
+  padding: 40px 0 80px;
+}
+
+
+
+.img-box {
+  width: 450px;
+  height: 400px;
+   overflow: hidden;        /* ตัดส่วนที่เกินจากกรอบ */
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  transition: transform 0.3s ease;
+  
+}
+
+/* ส่วนล่าง */
+footer {
+  background: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+footer .circle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*หน้าOC/*
+
+/* ---------- สไลด์ปก (ให้เท่าขนาด hero ของหน้า Home) ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  background: #fff;
+}
+
+/* แกนสไลด์ */
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 13%; 
+  transform: scale(1.0);   
+}
+
+.slides .slide:first-child {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+/* ปุ่มลูกศร */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  z-index: 5;
+}
+.prev { left: 25px; }
+.next { right: 25px; }
+
+/* จุดเล็ก ๆ */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.active, .dot:hover { background-color: #333; }
+
+/* ---------- หัวข้อใหญ่ ---------- */
+.section-title {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+.section-title h2 {
+  display: inline-block;
+  background: #d9d9d9;
+  padding: 45px 70px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+  .oc-sectionblue-title {
+    text-align: center;
+  margin: 50px 0 30px;
+  }
+
+  .oc-sectionblue-title h3 {
+    display: inline-block;
+  background: #ccd6e6;
+  padding: 12px 70px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  }
+
+  .oc-sectionpurple-title{
+    text-align: center;
+  margin: 50px 0 30px;
+  }
+
+  .oc-sectionpurple-title h4{
+    display: inline-block;
+  background: #d2b4d4;
+  padding: 12px 70px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  }
+
+
+
+/* ---------- OC Section ---------- */
+.oc-section {
+  width: 80%;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 30px 0 50px;
+}
+.oc-section.blue { background: #eaf2ff; }
+.oc-section.purple { background: #f1ecf9; }
+
+.oc-section h3 {
+  text-align: center;
+  font-weight: normal;
+  color: #5a6ea6;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.oc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.oc-card {
+  width: 220px;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 0 0 1px #919090;
+  
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* สถานะเมื่อเลื่อนเข้ามาใน viewport */
+.oc-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.oc-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-box-oc {
+  width: 100%;
+  height: 180px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-size: 14px;
+  
+}
+
+.img-box-oc img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.name {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.mbti {
+  font-size: 12.5px;
+  font-weight: bold;
+  color: #949494;
+  line-height: 1.5;
+  margin: 10px 0 5px;
+  
+}
+
+.info {
+  font-size: 10.7px;
+  font-weight: bold;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+/* ---------- Footer (ให้ตรงกับหน้า Home) ---------- */
+footer {
+  background: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+footer p {
+  font-size: 13px;
+  color: #555;
+  font-family: "Nunito", sans-serif;
+}
+footer .circle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+
+}
+
+
+
+
+
+
+
+
+/* ---------- หน้า GAME ---------- */
+
+
+
+.game-button-section {
+  text-align: center;
+  margin: 40px 0 60px;
+}
+
+.game-main-btn {
+  background: #dfe8ee;
+  border: none;
+  padding: 40px 80px;
+  border-radius: 40px;
+  font-size: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  cursor: default;
+}
+
+/* ส่วนเกมแต่ละรายการ */
+.game-section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.game-section h2 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.game-card1, .game-card2 {
+  background: #f9f9f9;
+  display: inline-block;
+  padding: 25px 25px 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* สีพื้นหลังเฉพาะแต่ละเกม */
+.game-card1 { background: #dbdad5; }
+.game-card2 { background: #e4dee2; }
+
+.game-card1:hover {
+  box-shadow: 0 15px 25px rgba(214, 199, 172, 0.4);
+  transform: translateY(-10px) scale(1.03);
+}
+
+.game-card2:hover {
+  box-shadow: 0 15px 25px rgba(216, 131, 188, 0.4);
+  transform: translateY(-10px) scale(1.03);
+}
+
+
+.game-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+   
+  
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.game-card1 img, .game-card2 img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.game-card1:hover img, .game-card2:hover img {
+  transform: scale(1.05) ;
+  
+}
+
+
+.game-card1, .game-card2 {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.game-card1.visible, .game-card2.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.game-type {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.link-text {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.game-link {
+  color: #5c5c5c;
+  font-size: 12.5px;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+.game-link:hover {
+  
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* ---------- หน้า GALLERY ---------- */
+
+/* ---------- หน้า GALLERY ---------- */
+
+/* ปุ่มส่วนหัว */
+.gallery-button-section {
+  text-align: center;
+  margin: 50px 0 60px;
+}
+
+.gallery-main-btn {
+  background: #ffffff;
+  border: none;
+  padding: 30px 70px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0,0,0,3);
+  cursor: default;
+}
+
+/* --- ส่วนแกลเลอรี 2 ภาพต่อแถว --- */
+.gallery-container {
+  width: 85%;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+  min-height: 400px; /* ความสูงคงที่ให้ layout เป็นระเบียบ */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto; /* ขนาดอัตโนมัติตามไฟล์ */
+  display: block;
+  
+}
+
+/* --- ส่วน Commission 3 ภาพต่อแถว --- */
+.commission-container {
+  width: 85%;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.commission-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.commission-item {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.commission-item img {
+  width: 100%;
+  height: auto; /* ปรับอัตโนมัติตามภาพจริง */
+  display: block;
+}
+
+/* Responsive ปรับให้สวยในจอเล็ก */
+@media (max-width: 768px) {
+  .gallery-item, .commission-item {
+    flex: 1 1 100%;
+  }
+}
+
+
+.gallery-item img {
+  width: 100%;
+  
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.commission-item img {
+  width: 100%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.commission-item:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
