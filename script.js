@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Card game*/
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".game-card1, .game-card2");
+  const cards = document.querySelectorAll(".game-card1, .game-card2 , .game-card3 ");
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

@@ -595,7 +595,7 @@ footer .circle {
 }
 
 
-.game-card1, .game-card2   {
+.game-card1, .game-card2 , .gamer-card3  {
   opacity: 0;
   transform: translateY(30px);
 }
