@@ -570,7 +570,7 @@ footer .circle {
 
 .game-card3:hover {
   box-shadow: 0 15px 25px rgba(241, 152, 174, 0.4);
-  transform: translateY(-10px) scale(1.03);
+  
 }
 
 
@@ -583,24 +583,24 @@ footer .circle {
   transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.game-card1 img, .game-card2 img {
+.game-card1 img, .game-card2 img , .game-card3 img{
   width: 100%;
   border-radius: 12px;
   transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.game-card1:hover img, .game-card2:hover img {
+.game-card1:hover img, .game-card2:hover img , .game-card3:hover img{
   transform: scale(1.05) ;
   
 }
 
 
-.game-card1, .game-card2 {
+.game-card1, .game-card2   {
   opacity: 0;
   transform: translateY(30px);
 }
 
-.game-card1.visible, .game-card2.visible {
+.game-card1.visible, .game-card2.visible , .game-card3.visible {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
