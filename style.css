@@ -542,7 +542,7 @@ footer .circle {
   margin-bottom: 20px;
 }
 
-.game-card1, .game-card2 {
+.game-card1, .game-card2 , .game-card3{
   background: #f9f9f9;
   display: inline-block;
   padding: 25px 25px 40px;
@@ -556,6 +556,7 @@ footer .circle {
 /* สีพื้นหลังเฉพาะแต่ละเกม */
 .game-card1 { background: #dbdad5; }
 .game-card2 { background: #e4dee2; }
+.game-card3 { background: #ffe6e9; }
 
 .game-card1:hover {
   box-shadow: 0 15px 25px rgba(214, 199, 172, 0.4);
