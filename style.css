@@ -568,6 +568,11 @@ footer .circle {
   transform: translateY(-10px) scale(1.03);
 }
 
+.game-card3:hover {
+  box-shadow: 0 15px 25px rgba(241, 152, 174, 0.4);
+  transform: translateY(-10px) scale(1.03);
+}
+
 
 .game-img {
   width: 100%;
