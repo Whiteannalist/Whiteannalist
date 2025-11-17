@@ -570,7 +570,7 @@ footer .circle {
 
 .game-card3:hover {
   box-shadow: 0 15px 25px rgba(241, 152, 174, 0.4);
-  
+  transform: translateY(-10px)
 }
 
 
@@ -595,7 +595,7 @@ footer .circle {
 }
 
 
-.game-card1, .game-card2 , .gamer-card3  {
+.game-card1, .game-card2 , .game-card3  {
   opacity: 0;
   transform: translateY(30px);
 }
